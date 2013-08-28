@@ -53,8 +53,8 @@ $pad: emCalc(20px);
   margin: 0 0 $pad 0;
   overflow: hidden;
 
-  &.has-background{
-    background-color: #e5e5e5;
+  &.grid-no-margin{
+    margin: 0;
   }
 }
 

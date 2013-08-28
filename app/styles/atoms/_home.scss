@@ -1,0 +1,81 @@
+// ==========================================================================
+// Defines the home section of the website
+// here we import our useful molecules
+// ==========================================================================
+.home{
+  background: $base-color;
+  color: $white;
+  //size
+  @include breakpoint (short){
+    padding: 120px 0 40px;
+  }
+  @include breakpoint (grande){
+    padding: 120px 0;
+  }
+}
+
+// ==========================================================================
+// Centering the hero of the comp
+// ==========================================================================
+.hero{
+  //size
+  width: 100%;
+  height: auto;
+  //position
+  margin: 55px auto;
+
+  @include breakpoint (trenta){
+    width: 80%;
+  }
+}
+
+
+// ==========================================================================
+// Text size divided by breakpoints
+// ==========================================================================
+
+@include breakpoint (short){
+  .statement{
+    @include font-size(22);
+    @include line-height(44);
+  }
+
+  .apps{
+    @include font-size(14);
+    @include line-height(22);
+  }
+}
+@include breakpoint (tall){
+  
+}
+@include breakpoint (grande){
+  .statement{
+    @include font-size(30);
+    @include line-height(67);
+  }
+
+  .apps{
+    @include font-size(16);
+    @include line-height(26);
+  }
+}
+@include breakpoint (venti){
+  .statement{
+    @include font-size(40);
+  }
+
+  .apps{
+    @include font-size(20);
+  }
+}
+@include breakpoint (trenta){
+  .statement{
+    @include font-size(45);
+    @include line-height(75);
+  }
+
+  .apps{
+    @include font-size(24);
+    @include line-height(30);
+  }
+}

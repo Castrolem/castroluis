@@ -3,8 +3,6 @@
 // erase and re-construct this area if your application or site needs it
 // ==========================================================================
 
-@import 'quarks/inputs';
-
 // temporary style
 .buttons-inline{
   .button{
@@ -18,11 +16,13 @@
 .button{
   @include box-sizing(border-box);
   @include font-size(16);
-  @include line-height(16);
+  @include line-height(32);
   @include transition($transition);
   @include letterpress(#000000, 0.25);
   -webkit-appearance: none;
   -webkit-font-smoothing: antialiased;
+  //size
+  height: 40px;
   //spacing
   margin: 4px;
   padding: emCalc(2px) emCalc(2px);
@@ -38,28 +38,6 @@
   //styles
   cursor: pointer;
   display: block;
-
-  &.rounded{
-    @include border-radius(5px);
-  }
-}
-
-// ==========================================================================
-// shadows
-// ==========================================================================
-.button{
-  &.drop-shadow{
-    @include box-shadow(1px 1px 2px rgba(#000000, 0.45));
-  }
-
-  &.inner-shadow{
-    @include box-shadow(inset 0px 1px 1px 2px rgba($white, 0.45), 
-                        inset -1px -1px 0px 4px rgba(#000000, 0.15));
-  }
-
-  &.emboss{
-    @include box-shadow(0 1px 0 rgba($white, 0.5) inset);
-  }
 }
 
 // ==========================================================================
@@ -67,38 +45,6 @@
 // ==========================================================================
 
 .button{
-  &.small{
-    @include font-size(12);
-    @include line-height(30);
-    min-width:  60px;
-    max-width:  120px;
-    min-height: 30px;
-  }
-
-  &.medium{
-    @include font-size(16);
-    @include line-height(32);
-    min-width:  90px;
-    max-width:  180px;
-    min-height: 32.5px;
-  }
-
-  &.large{
-    @include font-size(22);
-    @include line-height(40);
-    min-width:  120px;
-    max-width:  240px;
-    min-height: 40px;
-  }
-
-  &.extra-large{
-    @include font-size(26);
-    @include line-height(60);
-    min-width:  150px;
-    max-width:  300px;
-    min-height: 40px;
-  }
-  // take full width
   &.expand{
     min-width: 100%;
     max-width: 100%;
@@ -110,297 +56,14 @@
 // ==========================================================================
 .button{
   &.blue{
-    @include background(linear-gradient($blue, darken($blue,15%)));
-    border-color: $blue;
+    background: $teal;
     //states
     &:hover{
-      @include background(linear-gradient(darken($blue,5%), darken($blue,20%)));
+      background: darken($teal, 20%);
     }
 
     &:active{
-      @include background(linear-gradient($blue, darken($blue,10%)));
+      background: darken($teal, 10%);
     }
-
-    &.no-gradient{
-      background: $blue;
-      //states
-      &:hover{
-        background: darken($blue, 20%);
-      }
-
-      &:active{
-        background: darken($blue, 10%);
-      }
-    }
-  }
-
-  &.gray{
-    @include background(linear-gradient($gray, darken($gray,15%)));
-    border-color: $gray;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($gray,5%), darken($gray,25%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($gray, darken($gray,10%)));
-    }
-
-    &.no-gradient{
-      background: $gray;
-      //states
-      &:hover{
-        background: darken($gray, 20%);
-      }
-
-      &:active{
-        background: darken($gray, 10%);
-      }
-    }
-  }
-
-  &.green{
-    @include background(linear-gradient($green, darken($green,15%)));
-    border-color: $green;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($green,5%), darken($green,25%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($green, darken($green,10%)));
-    }
-
-    &.no-gradient{
-      background: $green;
-      //states
-      &:hover{
-        background: darken($green, 20%);
-      }
-
-      &:active{
-        background: darken($green, 10%);
-      }
-    }
-  }
-
-  &.orange{
-    @include background(linear-gradient($orange, $red));
-    border-color: $orange;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($orange,5%), darken($red,10%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($orange, darken($red,5%)));
-    }
-
-    &.no-gradient{
-      background: $orange;
-      //states
-      &:hover{
-        background: darken($orange, 5%);
-      }
-
-      &:active{
-        background: darken($orange, 10%);
-      }
-    }
-  }
-
-  &.pink{
-    @include background(linear-gradient($pink, $red));
-    border-color: $pink;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($pink,5%), darken($red,25%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($pink, darken($red,10%)));
-    }
-
-    &.no-gradient{
-      background: $pink;
-      //states
-      &:hover{
-        background: darken($pink, 20%);
-      }
-
-      &:active{
-        background: darken($pink, 10%);
-      }
-    }
-  }
-
-  &.red{
-    @include background(linear-gradient($red, darken($red,15%)));
-    border-color: $red;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($red,5%), darken($red,25%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($red, darken($red,10%)));
-    }
-    &.no-gradient{
-      background: $red;
-      //states
-      &:hover{
-        background: darken($red, 20%);
-      }
-
-      &:active{
-        background: darken($red, 10%);
-      }
-    }
-  }
-
-  &.teal{
-    @include background(linear-gradient($teal, $blue));
-    border-color: $teal;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($teal,5%), darken($blue,15%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($teal, darken($blue,10%)));
-    }
-
-    &.no-gradient{
-      background: $teal;
-      //states
-      &:hover{
-        background: darken($teal, 20%);
-      }
-
-      &:active{
-        background: darken($teal, 10%);
-      }
-    }
-  }
-
-  &.violet{
-    @include background(linear-gradient($violet, darken($violet,15%)));
-    border-color: $violet;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($violet,5%), darken($violet,25%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($violet, darken($violet,10%)));
-    }
-
-    &.no-gradient{
-      background: $violet;
-      //states
-      &:hover{
-        background: darken($violet, 20%);
-      }
-
-      &:active{
-        background: darken($violet, 10%);
-      }
-    }
-  }
-
-  &.yellow{
-    @include background(linear-gradient($yellow, $orange));
-    border-color: $yellow;
-    //states
-    &:hover{
-      @include background(linear-gradient(darken($yellow,5%), darken($orange,5%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($yellow, darken($orange,10%)));
-    }
-
-    &.no-gradient{
-      background: $yellow;
-      //states
-      &:hover{
-        background: darken($yellow, 5%);
-      }
-
-      &:active{
-        background: darken($yellow, 10%);
-      }
-    }
-  }
-  // no gradient buttons have a transition to smooth things out or emboss
-  &.no-gradient{
-    &:hover{
-      @include transition(none);
-    }
-  }
-}
-
-// ==========================================================================
-// button defaults
-// ==========================================================================
-.button{
-  // already called in the buttons section, you can enable it if you delete
-  // the selection or comment it, on it.
-  // &.danger, &.success, &.alert, &.disabled{
-  //   @include box-emboss(0.20, 0.25);
-  //   @include letterpress(#000000, 0.25);
-  // }
-
-  &.danger{
-    @include background(linear-gradient($red, darken($red,15%)));
-    border-color: $red;
-    // states
-    &:hover{
-      @include background(linear-gradient(darken($red,5%), darken($red,25%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($red, darken($red,10%)));
-    }
-  }
-
-  &.success{
-    @include background(linear-gradient($green, darken($green,10%)));
-    border-color: $green;
-    // states
-    &:hover{
-      @include background(linear-gradient(darken($green,5%), darken($green,15%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($green, darken($green,10%)));
-    }
-  }
-
-  &.alert{
-    @include background(linear-gradient($yellow, $orange));
-    border-color: $yellow;
-    // states
-    &:hover{
-      @include background(linear-gradient(lighten($yellow,5%), darken($orange,5%)));
-    }
-
-    &:active{
-      @include background(linear-gradient($yellow, lighten($orange,10%)));
-    }
-  }
-
-  &.disabled{
-    @include background(linear-gradient(lighten($gray, 20%), lighten($gray, 25%)));
-    // states
-    cursor: inherit;
-    border: 1px solid $gray;
-    // &:hover{
-    //   none
-    // }
-
-    // &:active{
-    //   none
-    // }
   }
 }

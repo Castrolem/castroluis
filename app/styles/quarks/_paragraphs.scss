@@ -4,6 +4,7 @@
 
 h2,
 h3,
+h4,
 p{
   -webkit-font-smoothing: antialiased;
   font-family: $normal-font;
@@ -14,12 +15,20 @@ p{
 h2{
   @include font-size($h2-size);
   @include line-height($h2-size);
+  font-family: $secondary-font;
   font-weight: $light;
 }
 
 h3{
   @include font-size($h3-size);
   @include line-height($h3-size);
+  font-weight: $bold;
+}
+
+h4{
+  @include font-size($h4-size);
+  @include line-height($h4-size);
+  font-family: $secondary-font;
   font-weight: $light;
 }
 
@@ -37,15 +46,12 @@ p{
   text-align: center;
 }
 
-.text-block{
-  margin: 1em auto;
-  padding: 3em 0;
-  @include breakpoint (short){
-    text-align: center;
-  }
-  @include breakpoint (grande){
-    text-align: left;
-  }
+.text-left{
+  text-align: left;
+}
+
+.text-right{
+  text-align: right;
 }
 
 // ==========================================================================

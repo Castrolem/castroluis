@@ -13,18 +13,18 @@ $legacy-support-for-ie7:       false;
 // colors
 $base:    #ffffff; // choose your base color from the list down or make it
 $blue:    #363b48;
-$gray:    #fff;
+$gray:    #444444;
 $green:   #fff;
-$orange:  #fff;
+$orange:  #f68c26;
 $pink:    #fff;
-$red:     #fff;
-$teal:    #fff;
+$red:     #ea5854;
+$teal:    #3498db;
 $violet:  #fff;
 $white:   #ffffff;
 $yellow:  #fff;
 
 // color setup
-$base-color:   $teal;
+$base-color:   $blue;
 $border-color: $base;
 
 // animations
@@ -38,10 +38,11 @@ $link-color-active: lighten($base, 10%);
 // ==========================================================================
 // fonts-families
 // ==========================================================================
+@import url(http://fonts.googleapis.com/css?family=Trocchi|Raleway:400,200,700);
 // this one should be a serif
-$normal-font: 'Helvetica Neue', Helvetica, serif;
+$normal-font: 'Raleway','Helvetica Neue', Helvetica, serif;
 // this one should be a sans-serif
-$secondary-font: sans-serif;
+$secondary-font: 'Trocchi', sans-serif;
 
 // font-weight
 $light:     200;
@@ -59,7 +60,8 @@ $text-color:  $base;
 $font-base: 10px;
 $h2-size:   32;
 $h3-size:   22;
-$p-size:    16;
+$h4-size:   18;
+$p-size:    18;
 
 // others
 $indent:    -9999px;

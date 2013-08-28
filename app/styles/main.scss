@@ -12,7 +12,10 @@
 @import 'utilities/normalize',
         'utilities/config',
         'utilities/mixins',
-        'utilities/functions';     
+        'utilities/functions';
+
+@import 'quarks/paragraphs',
+        'quarks/sections';
 
 // ==========================================================================
 // All the molecules you are going to need to make your organism evolve.
@@ -22,14 +25,20 @@
 // something really small.
 // **************** you shouldn't have more than six (6) ********************
 // ==========================================================================
-
-
+@import 'molecules/grids',
+        'molecules/buttons';
 
 // ==========================================================================
 // Congrat's! Your molecules evolved and now you have atoms, which you import
 // right below this comment.
 // ==========================================================================
-
+@import 'atoms/menu',
+        'atoms/home',
+        'atoms/services',
+        'atoms/work',
+        'atoms/contact',
+        'atoms/about',
+        'atoms/footer';
 
 // ==========================================================================
 // You created an organism combining all those atoms? My god, well, you need

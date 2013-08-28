@@ -29,7 +29,7 @@
   <!-- navigation -->
   <nav class='main-nav'>
     <div class='wrapper'>
-      <div class='grid'>
+      <div class='grid grid-no-margin'>
         <div class='logo hide-text'>
           Luis Castro - FrontEnd Developer
         </div>
@@ -59,14 +59,14 @@
   <section class='home' id='home'>
     <div class='wrapper'>
       <div class='grid'>
-        <div class='cols-12-12'>
-          <h2 class='text-center'>
+        <div class='cols-12-12 text-center'>
+          <h2 class='statement'>
             UI and Web Designer. Front-End Developer.
           </h2>
-          <h4 class='text-center'>
+          <h4 class='apps'>
             Photoshop • Illustrator • Sketch • MockUps • HTML • CSS • jQuery • Yeoman
           </h4>
-          <img class='hero' src='http://placekitten.com/500/400' />
+          <img class='hero' src='../images/hero.svg' />
         </div>
       </div>
     </div>
@@ -74,9 +74,9 @@
   <!-- /home -->
 
   <!-- services -->
-  <section class='services' id='services'>
+  <section class='services has-pad' id='services'>
     <div class='wrapper'>
-      <div class='grid'>
+      <div class='grid grid-no-margin'>
         <div class='cols-6-12'>
           <h3>
             What I do
@@ -86,6 +86,7 @@
           </p>
         </div>
         <div class='cols-6-12'>
+          <h3>My Philosophy</h3>
           <p>
             <strong>I design, I Code, I Love</strong>
             Working directly with clients, I play a key role in the development of clean and modern solutions that utilize hand-coded HTML5 and CSS3 along with accessible, standards-based implementations and modern trends in web/mobile design. I also have extensive experience managing several staff, creative projects and tasks across multiple markets while maintaining solutions to my clients.
@@ -97,19 +98,26 @@
   <!-- /services -->
 
   <!-- work -->
-  <section class='work' id='work'>
+  <section class='work has-pad' id='work'>
     <div class='wrapper'>
       <div class='grid'>
         <div class='cols-12-12'>
-          <img class='client' src='http://placekitten.com/600/300' />
+          <h2 class='text-center'>
+            Design is more than just an after-thought.
+          </h2>
         </div>
       </div>
       <div class='grid'>
+        <div class='cols-12-12'>
+          <img class='client' src='http://placekitten.com/1100/600' />
+        </div>
+      </div>
+      <div class='grid grid-no-margin'>
         <div class='cols-6-12'>
-          <img class='client' src='http://placekitten.com/500/300' />
+          <img class='client' src='http://placekitten.com/525/300' />
         </div>
         <div class='cols-6-12'>
-          <img class='client' src='http://placekitten.com/500/300' />
+          <img class='client' src='http://placekitten.com/525/300' />
         </div>
       </div>
     </div>
@@ -117,7 +125,7 @@
   <!-- /work -->
 
   <!-- about -->
-  <section class='about' id='about'>
+  <section class='about has-pad' id='about'>
     <div class='wrapper'>
       <div class='grid'>
         <div class='cols-6-12'>
@@ -125,7 +133,7 @@
             What I love
           </h3>
           <p>
-            I breath design and innovative technologies. Always studying to be a better developer, It's what gets me out of bed in the morning (besides a coffee and the usual iPhone alarm). I thrive on understanding basic concepts and ideas in order to execute user-driven solutions.
+            Right, where to start? You've probably already figured out my name is Luis Castro. I breath design and innovative technologies. Always studying to be a better developer, It's what gets me out of bed in the morning (besides a coffee and the usual iPhone alarm). I thrive on understanding basic concepts and ideas in order to execute user-driven solutions.
           </p>
         </div>
         <div class='cols-6-12'>
@@ -137,7 +145,7 @@
           </p>
         </div>
       </div>
-      <div class='grid'>
+      <div class='grid grid-no-margin'>
         <div class='cols-12-12'>
           <p>
             Still there? Plain and simple, I make good websites. I like pixel perfection and I like my code clean. I make websites like I make coffee - strong, reliable and not rushed. You can see more of what I do up there, and links to other portfolios and sites below, and then you can contact me with your ideas on how you want to make the next Facebook.
@@ -149,19 +157,59 @@
   <!-- /about -->
 
   <!-- contact -->
-  <section class='contact' id='contact'>
+  <section class='contact has-pad' id='contact'>
     <div class='wrapper'>
-      <div class='grid'>
-        <div class='cols-6-12'>
-
-        </div>
-        <div class='cols-6-12'>
-
+      <div class='grid grid-no-margin'>
+        <div class='cols-12-12'>
+          <nav class='social-nav text-center'>
+            <ul>
+              <li>
+                <a class='twitter' href='#'>Twitter</a>
+              </li>
+              <li>
+                <a class='facebook' href='#'>Facebook</a>
+              </li>
+              <li>
+                <a class='hashlabs' href='#'>Hashlabs</a>
+              </li>
+              <li>
+                <a class='github' href='#'>Github</a>
+              </li>
+              <li>
+                <a class='linkedin' href='#'>LinkedIn</a>
+              </li>
+              <li>
+                <a class='youtube' href='#'>Youtube</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
   </section>
   <!-- /contact -->
+
+  <!-- footer -->
+  <footer class='has-pad'>
+    <div class='wrapper'>
+      <div class='grid grid-no-margin'>
+        <div class='cols-5-12'>
+          <p class='copyright'>
+            Luis Eduardo Castro Moreno © 2013
+          </p>
+        </div>
+        <div class='cols-2-12'>
+          <a class='button blue expand' href='mailto:hola@castroluis.com'>Email me</a>
+        </div>
+        <div class='cols-5-12'>
+          <p class='tools'>
+            Made with HTML5 and CSS3
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- /footer -->
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->

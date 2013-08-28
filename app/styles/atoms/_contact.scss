@@ -1,0 +1,23 @@
+// ==========================================================================
+// Defines the contact section of the website
+// here we import our useful molecules
+// ==========================================================================
+.contact{
+  background: $orange;
+  color: $white;
+  //spacing
+  padding: 80px 0;
+}
+
+// ==========================================================================
+// My contact list
+// ==========================================================================
+.social-nav ul li{
+
+  a{
+    display: block;
+    //size
+    width: 80px;
+    height: 80px; 
+  }
+}
