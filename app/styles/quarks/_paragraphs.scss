@@ -1,0 +1,82 @@
+// ==========================================================================
+// font styles
+// ==========================================================================
+
+h2,
+h3,
+p{
+  -webkit-font-smoothing: antialiased;
+  font-family: $normal-font;
+  margin: 0 auto 5px;
+  padding: 0;
+}
+
+h2{
+  @include font-size($h2-size);
+  @include line-height($h2-size);
+  font-weight: $light;
+}
+
+h3{
+  @include font-size($h3-size);
+  @include line-height($h3-size);
+  font-weight: $light;
+}
+
+p{
+  @include font-size($p-size);
+  @include line-height(36);
+  font-weight: $regular;
+}
+
+// ==========================================================================
+// font position
+// ==========================================================================
+
+.text-center{
+  text-align: center;
+}
+
+.text-block{
+  margin: 1em auto;
+  padding: 3em 0;
+  @include breakpoint (short){
+    text-align: center;
+  }
+  @include breakpoint (grande){
+    text-align: left;
+  }
+}
+
+// ==========================================================================
+// font styles
+// ==========================================================================
+
+.is-capital{
+  text-transform: capitalize;
+}
+
+.is-uppercase{
+  text-transform: uppercase;
+}
+
+// ==========================================================================
+// hide text
+// ==========================================================================
+
+.hide-text{
+  @include hide-text();
+}
+
+// ==========================================================================
+// selection styles
+// ==========================================================================
+
+::selection {
+  background: $base-color; // Safari, chrome
+  color: $white;
+}
+::-moz-selection {
+  background: $base-color; // Firefox
+  color: $white;
+}

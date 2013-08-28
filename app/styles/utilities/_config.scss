@@ -1,0 +1,83 @@
+// ==========================================================================
+// this file contains the configurations of some of the 
+// variables that we use on the project, most of them are 
+// variables that use colors, dependencies and create some 
+// sort of value that is always the same trough the app
+// ==========================================================================
+
+// compass support of
+$experimental-support-for-svg: true;
+$legacy-support-for-ie6:       false;
+$legacy-support-for-ie7:       false;
+
+// colors
+$base:    #ffffff; // choose your base color from the list down or make it
+$blue:    #007aff;
+$gray:    #8e8e93;
+$green:   #4cd964;
+$orange:  #ff9500;
+$pink:    #ff2d55;
+$red:     #ff3b30;
+$teal:    #34aadc;
+$violet:  #5856d6;
+$white:   #ffffff;
+$yellow:  #ffcc00;
+
+// color setup
+$base-color:   $teal;
+$border-color: $base;
+
+// animations
+$transition: all 0.218s ease-in-out;
+
+// links
+$link-color:        $base;
+$link-color-hover:  $base;
+$link-color-active: lighten($base, 10%);
+
+// ==========================================================================
+// fonts-families
+// ==========================================================================
+// this one should be a serif
+$normal-font: 'Helvetica Neue', Helvetica, serif;
+// this one should be a sans-serif
+$secondary-font: sans-serif;
+
+// font-weight
+$light:     200;
+$regular:   400;
+$semi-bold: 600;
+$bold:      700;
+
+// font-color
+$title-color: $base;
+$text-color:  $base;
+
+// font-sizes
+// you want to express in Pixels, because you can use emCalc or remCalc in
+// your atom's stylesheet
+$font-base: 10px;
+$h2-size:   32;
+$h3-size:   22;
+$p-size:    16;
+
+// others
+$indent:    -9999px;
+
+// ==========================================================================
+// Coffee sizes
+// ==========================================================================
+// Short, Tall, Grande, Venti, Trenta, Depth Charge.
+// whip equals 7.5% of coffee calories aprox. So we dont want it...
+// ==========================================================================
+$short:     310px;
+$tall:      480px;
+$grande:    760px;
+$venti:     960px;
+$trenta:    1140px;
+
+// Extras
+$decaf:   60;
+$cocoa:   50;
+$cream:   30;
+$caramel: 20;

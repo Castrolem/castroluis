@@ -1,0 +1,31 @@
+// ==========================================================================
+// header full width navigation type, great for a horizontal menu that takes 
+// full width of your browser always
+// ==========================================================================
+.main-nav{
+  -webkit-font-smoothing: antialiased;
+  // background: darken($base-color, 45%);
+  width: 100%;
+  height: 80px;
+
+  a{
+    @include font-size(16);
+    @include line-height(16);
+    font-weight: $semi-bold;
+    // color: $white;
+    text-decoration: none;
+    &:hover{
+      @include opacity(0.9);
+    }
+  }
+}
+
+.main-nav ul{
+  @include navigation-list();
+  margin-right: 30px;
+  float: right;
+  li{
+    margin-right: 20px;
+    border: 1px solid transparent;
+  }
+}

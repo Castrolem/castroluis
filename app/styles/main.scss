@@ -1,0 +1,37 @@
+// ==========================================================================
+// Compass is an important file in this work, if you don't have it installed
+// it yet, I totally recomend it, and also, this wont work if you do not have
+// the gem installed, go ahead.
+// ==========================================================================
+@import 'compass';
+
+// ==========================================================================
+// Bring all the utilities you want to the table, but do it in order
+// (not in a particular one).
+// ==========================================================================
+@import 'utilities/normalize',
+        'utilities/config',
+        'utilities/mixins',
+        'utilities/functions';     
+
+// ==========================================================================
+// All the molecules you are going to need to make your organism evolve.
+// **************************************************************************
+// Remenber, molecules are used to form atoms, you only import a molecule
+// here if you are not using it inside an atom, or if you need it to create
+// something really small.
+// **************** you shouldn't have more than six (6) ********************
+// ==========================================================================
+
+
+
+// ==========================================================================
+// Congrat's! Your molecules evolved and now you have atoms, which you import
+// right below this comment.
+// ==========================================================================
+
+
+// ==========================================================================
+// You created an organism combining all those atoms? My god, well, you need
+// to import those right here.
+// ==========================================================================

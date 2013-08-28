@@ -1,0 +1,151 @@
+// ==========================================================================
+// Here we define the size of the breakpoints we are going 
+// to use for the custom layout of the site, also all the sizes
+// ==========================================================================
+
+// Padding variable
+$pad: emCalc(20px);
+
+*,
+*::after,
+*::before {
+  @include box-sizing(border-box);
+}
+
+.wrapper {
+  margin: 0 auto;
+  //iPhone portrait & landscape
+  width: $short;
+  @include breakpoint(tall){
+    width: $tall - $caramel;
+  }
+  //iPad portrait & landscape
+  @include breakpoint(grande){
+    width: $grande - $caramel;
+  }
+  //small notebooks
+  @include breakpoint(venti){
+    width: $venti - $caramel;
+  }
+  //desktop and beyond
+  @include breakpoint(trenta){
+    width: $trenta - $caramel;
+  }
+}
+
+.module {
+  padding: $pad - 1;
+
+  > *:last-child,
+  > *:last-child > *:last-child,
+  > *:last-child > *:last-child > *:last-child {
+    margin: 0;
+  }
+
+  &.has-background{
+    @include font-size(12);
+    background-color: lighten($gray, 20%);
+  }
+}
+
+.grid {
+  @extend clearfix;
+  margin: 0 0 $pad 0;
+  overflow: hidden;
+
+  &.has-background{
+    background-color: #e5e5e5;
+  }
+}
+
+[class*='cols-'] {
+  float: left;
+  padding: 0;
+}
+
+@include breakpoint(grande){
+  [class*='cols-'] {
+    padding: 0 $pad 0 0;
+  }
+}
+
+.grid [class*='cols-']:last-of-type {
+  padding: 0;
+}
+
+.cols-1-12,
+.cols-2-12,
+.cols-3-12,
+.cols-4-12,
+.cols-5-12,
+.cols-6-12,
+.cols-7-12,
+.cols-8-12,
+.cols-9-12,
+.cols-10-12,
+.cols-11-12,
+.cols-12-12 {
+  position: relative;
+}
+
+@include breakpoint(short){
+  .cols-1-12,
+  .cols-2-12,
+  .cols-3-12,
+  .cols-4-12,
+  .cols-5-12,
+  .cols-6-12,
+  .cols-7-12,
+  .cols-8-12,
+  .cols-9-12,
+  .cols-10-12,
+  .cols-11-12,
+  .cols-12-12 {
+    width: 100%;
+  }
+}
+
+@include breakpoint(grande){
+  .cols-1-12 {
+    width: 8.3333%;
+  }
+  .cols-2-12 {
+    width: 16.6667%;
+  }
+  .cols-3-12 {
+    width: 25%;
+  }
+  .cols-4-12 {
+    width: 33.33%;
+  }
+  .cols-5-12 {
+    width: 41.6667%;
+  }
+  .cols-6-12 {
+    width: 50%;
+  }
+  .cols-7-12 {
+    width: 58.3333%;
+  }
+  .cols-8-12 {
+    width: 66.66%;
+  }
+  .cols-9-12 {
+    width: 75%;
+  }
+  .cols-10-12 {
+    width: 83.3333%;
+  }
+  .cols-11-12 {
+    width: 91.6667%;
+  }
+}
+
+//Opt-in outside padding
+
+.grid-pad {
+  padding: $pad 0 $pad $pad;
+  [class*='col-']:last-of-type {
+    padding-right: $pad;
+  }
+}
