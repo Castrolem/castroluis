@@ -1,0 +1,15 @@
+// ==========================================================================
+// Defines the footer of the website here we import our useful molecules
+// ==========================================================================
+@include breakpoint(short){
+  .client{
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+}
+
+@include breakpoint(venti){
+  .half-size{
+    max-height: 300px;
+  }
+}

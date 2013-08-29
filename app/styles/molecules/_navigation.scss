@@ -8,7 +8,6 @@
   z-index: 9999;
   //size
   width: 100%;
-  height: 60px;
   //styles
   background: $white;
 
@@ -19,15 +18,33 @@
     // color: $white;
     text-decoration: none;
     &:hover{
-      @include opacity(0.9);
+      @include opacity(0.8);
     }
+  }
+
+  ul > li{
+    @include breakpoint(grande, 'max-width'){
+      display: inline-block !important;
+      float: none !important;
+      width: auto;
+
+      a{
+        @include font-size(12);
+      }
+    }
+  }
+
+  @include breakpoint(short){
+    height: 80px;
+  }
+  @include breakpoint(grande){
+    height: 60px;
   }
 }
 
 .main-nav ul, .social-nav ul{
   @include navigation-list();
   display: inline-block;
-  margin-right: 30px;
   float: right;
   li{
     margin-right: 20px;

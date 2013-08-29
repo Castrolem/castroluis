@@ -9,15 +9,107 @@
   padding: 80px 0;
 }
 
+.social-nav ul{
+  margin: 0;
+}
+
 // ==========================================================================
 // My contact list
 // ==========================================================================
 .social-nav ul li{
-
+  @include breakpoint(grande, 'max-width'){
+    display: inline-block;
+    float: none;
+    &:nth-child(2n){
+      margin: 0;
+    }
+  }
   a{
+    @include hide-text();
     display: block;
-    //size
-    width: 80px;
-    height: 80px; 
+    @include breakpoint(short){
+      //size
+      width: 114px;
+      height: 101px;
+    }
+    @include breakpoint(grande){
+      //size
+      width: 103px;
+      height: 91px;
+    }
+  }
+}
+
+// ==========================================================================
+// Icons
+// ==========================================================================
+@include breakpoint(short){
+  .twitter{
+    background-image: url($twitter);
+    background-size: cover;
+    &:hover{
+      background-position: 0 -109px;
+    }
+  }
+  .facebook{
+    background-image: url($facebook);
+    background-size: cover;
+    &:hover{
+      background-position: 0 -109px;
+    }
+  }
+  .youtube{
+    background-image: url($youtube);
+    background-size: cover;
+    &:hover{
+      background-position: 0 -109px;
+    }
+  }
+  .hashlabs{
+    background-image: url($hashlabs);
+    background-size: cover;
+    &:hover{
+      background-position: 0 -109px;
+    }
+  }
+  .github{
+    background-image: url($github);
+    background-size: cover;
+    &:hover{
+      background-position: 0 -109px;
+    }
+  }
+}
+
+@include breakpoint(grande){
+  .twitter{
+    background-position: 0 0;
+    &:hover{
+      background-position: 0 -99px;
+    }
+  }
+  .facebook{
+    background-position: 0 0;
+    &:hover{
+      background-position: 0 -99px;
+    }
+  }
+  .youtube{
+    background-position: 0 0;
+    &:hover{
+      background-position: 0 -99px;
+    }
+  }
+  .hashlabs{
+    background-position: 0 0;
+    &:hover{
+      background-position: 0 -99px;
+    }
+  }
+  .github{
+    background-position: 0 0;
+    &:hover{
+      background-position: 0 -99px;
+    }
   }
 }

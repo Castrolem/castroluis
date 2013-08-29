@@ -13,10 +13,18 @@ p{
 }
 
 h2{
-  @include font-size($h2-size);
-  @include line-height($h2-size);
-  font-family: $secondary-font;
-  font-weight: $light;
+  @include breakpoint(short){
+    @include font-size($h2-size - 10);
+    @include line-height($h2-size + 10);
+    font-family: $secondary-font;
+    font-weight: $light;
+  }
+  @include breakpoint(grande){
+    @include font-size($h2-size);
+    @include line-height($h2-size);
+    font-family: $secondary-font;
+    font-weight: $light;
+  }
 }
 
 h3{

@@ -2,24 +2,23 @@
 // Define the size of the breakpoints using the syntax of coffee 
 // sizes established in variables
 // ==========================================================================
-@mixin breakpoint($point) {
+@mixin breakpoint($point, $var:"min-width") {
   @if $point == short {
-    @media only screen and (min-width: $short) { @content; }
+    @media only screen and ($var: $short) { @content; }
   }
   @else if $point == tall {
-    @media only screen and (min-width: $tall) { @content; }
+    @media only screen and ($var: $tall) { @content; }
   }
   @else if $point == grande {
-    @media only screen and (min-width: $grande)  { @content; }
+    @media only screen and ($var: $grande)  { @content; }
   }
   @else if $point == venti {
-    @media only screen and (min-width: $venti) { @content; }
+    @media only screen and ($var: $venti) { @content; }
   }
   @else if $point == trenta {
-    @media only screen and (min-width: $trenta)  { @content; }
+    @media only screen and ($var: $trenta)  { @content; }
   }
 }
-
 // ==========================================================================
 // Define the retina display media query
 // ==========================================================================

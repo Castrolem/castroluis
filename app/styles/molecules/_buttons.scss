@@ -24,10 +24,10 @@
   //size
   height: 40px;
   //spacing
-  margin: 4px;
+  margin: 15px auto 0;
   padding: emCalc(2px) emCalc(2px);
   border: 1px solid;
-  border-color: $white;
+  border-color: $teal;
   //font
   font-family: $normal-font;
   font-weight: $bold;
@@ -46,8 +46,8 @@
 
 .button{
   &.expand{
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 180px;
+    max-width: 340px;
   }
 }
 
