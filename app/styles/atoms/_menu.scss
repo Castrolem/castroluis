@@ -15,8 +15,13 @@
     text-align: center;
   }
 
-  @include breakpoint(tall, 'max-width'){
+  @include breakpoint(grande, 'max-width'){
     position: absolute;
+    text-align: center;
+
+    ul{
+      float: none;
+    }
   }
 }
 
@@ -35,6 +40,7 @@
     font-weight: $bold;
     text-align: center;
     margin: 0 auto 10px;
+    cursor: default;
   }
   @include breakpoint(grande){
     //size
