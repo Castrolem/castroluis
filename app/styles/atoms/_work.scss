@@ -3,7 +3,7 @@
 // ==========================================================================
 .client{
   @include line-height(0);
-  border: 1px solid lighten($gray, 40%);
+  border: 1px solid lighten($gray, 60%);
   display: block;
 
   &:hover{
