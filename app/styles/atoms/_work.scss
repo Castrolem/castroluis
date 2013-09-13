@@ -1,9 +1,27 @@
 // ==========================================================================
 // Defines the footer of the website here we import our useful molecules
 // ==========================================================================
+.client{
+  @include line-height(0);
+  border: 1px solid lighten($gray, 40%);
+  display: block;
+
+  &:hover{
+    @include opacity(0.9);
+  }
+
+  &:active{
+    @include opacity(0.83);
+  }
+}
+
 @include breakpoint(short){
-  .client{
+  .image{
     width: 100%;
+    margin: 0 auto;
+  }
+
+  .client{
     margin: 0 auto 20px;
   }
 }
